@@ -96,7 +96,10 @@ export default async function ProductsRoute() {
                   </TableCell>
                
                   <TableCell>{item.category}</TableCell>
-                  <TableCell>{item.subcategory}</TableCell>
+                  <TableCell>{item.category1}</TableCell>
+                  <TableCell>{item.category2}</TableCell>
+                  <TableCell>{item.category3}</TableCell>
+                  <TableCell>{item.category4}</TableCell>
                   <TableCell className="text-end">
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
