@@ -1,0 +1,66 @@
+.HeaderNavigation_186_136 {
+  flex-shrink: 0;
+  width: 1248px;
+  height: 75px;
+}
+.LinkLogoLightPng_177_43 {
+  aspect-ratio: 210/75.12;
+  background: #d3d3d3 url("/public/logod.png") 50% / contain no-repeat;
+  flex-shrink: 0;
+  width: 210px;
+  height: 75.1154px;
+  overflow: hidden;
+}
+.Group_5362_177_44 {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+.Rectangle_7_185_64 {
+  backdrop-filter: blur(27px);
+  box-sizing: border-box;
+  background: linear-gradient(#ffffff1a 0.28%, #0000 140.18%);
+  border: 0.5px solid #f9bf00;
+  border-radius: 7px;
+  flex-shrink: 0;
+  width: 32px;
+  height: 82px;
+  transform: rotate(90deg);
+}
+.Home_177_48,
+.Services_177_49,
+.Shop_177_50,
+.Blog_177_51,
+.Contact_177_52 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Blauer Nue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.5px;
+  display: inline-block;
+}
+.Other_177_53 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Blauer Nue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25.5px;
+  display: inline-block;
+}
+.Cart_179_332 {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+.Vector_179_336 {
+  fill: #fff;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}

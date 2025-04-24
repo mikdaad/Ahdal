@@ -1,0 +1,205 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String @id @unique  @default(uuid())
+  email        String @unique
+  name         String?
+  firstName    String?
+  lastName     String?
+  profileImage String?
+  address      Address?
+  phoneno      String?
+  emailVerified DateTime? @map("email_verified")
+  updatedAt     DateTime?  @updatedAt @map("updated_at")
+  accounts   Account[]
+  image      String?
+  reviews     String?
+
+
+  orders Order[]
+  wishlists    Wishlist[] 
+  sessions      Session[]
+
+  createdAt DateTime @default(now())
+}
+
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @unique
+  access_token       String? // Optional if you don’t want to store tokens
+  expires_at         Int? // Store expiry time for tokens if needed
+  scope             String?
+  refresh_token      String?
+  token_type          String?
+  id_token            String?
+  
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade) 
+  @@unique([provider, providerAccountId])  
+  
+
+  @@map("accounts")
+}
+
+
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model Address {
+  id        String  @id @unique
+  user      User?   @relation(fields: [userId], references: [id]) // ✅ Make User optional
+  userId    String? @unique // ✅ Make User ID optional
+  street    String
+  city      String
+  state     String
+  postalCode String
+  phoneno     String
+  shippingnote String?
+}
+
+model Product {
+  id          String        @id @default(uuid())
+  name        String
+  description String
+  category1   doorone
+  category2   doortwo
+  category3   doorthree
+  category4   windows
+  originalprice       Int
+  discountprice       Int
+  images      String[]
+  category    Category
+
+  ispremium  Boolean       @default(false)
+  stars       Int
+  colors      String[]
+  dimensions  String?
+  material    String?
+  warranty    String?
+  longdescription String?
+  isstock     Boolean       @default(true)
+  reviews         Review[]
+
+  
+
+  createdAt DateTime @default(now())
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  name      String   // Reviewer's name
+  star      Int      // Star rating for this specific review
+  review    String   // The review text
+  createdAt DateTime @default(now())
+
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+
+  // Optional: Index for querying reviews by product
+  @@index([productId])
+}
+
+
+
+
+model Order {
+  id     String @id @default(uuid())  @unique
+  status String @default("pending")
+  amount Int
+
+  User   User?   @relation(fields: [userId], references: [id])
+  userId String?
+  transactionId   String?
+  itemid  String?
+  itemimage String?
+  itemname String?
+  itemquantity  Int
+  itemcolor  String?
+
+  paymentmode  String
+
+
+  createdAt DateTime @default(now())
+}
+
+
+model Wishlist {
+  id        String  @id @default(uuid())
+  userId    String?
+  user      User?   @relation(fields: [userId], references: [id])
+  items     Json    // Storing wishlist items as JSON (can be an array of product IDs or objects)
+  
+  createdAt DateTime @default(now())
+}
+
+
+
+
+enum Category {
+  Doors
+  Windows
+}
+
+enum doorone {
+singledoor 
+doubledoor 
+fourfolding 
+motherandson
+none
+}
+
+enum doortwo {
+normalhandle 
+fridgehandle 
+barhandle
+none
+}
+
+enum doorthree {
+singlelock 
+multilock 
+smartlock
+none
+}
+
+
+enum windows {
+none
+GI
+SS304
+}
