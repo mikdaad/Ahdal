@@ -128,10 +128,10 @@ export function ProductCard({ item, className }: ProductCardProps) {
 
         {/* Price */}
         <Link href={`/product/${item.id}`}> <div className="flex items-center gap-1 mt-2 font-['Blauer_Nue']">
-          <span className="text-[#778082]/60 line-through text-xs font-light">
-            ₹{item.originalprice}
+          <span className="text-white text-xs lg:text-sm  font-semibold">
+            ₹{item.originalprice} -
           </span>
-          <span className="text-white text-sm font-semibold">
+          <span className="text-white text-xs  font-semibold">
             ₹{item.discountprice}
           </span>
         </div> </Link>
