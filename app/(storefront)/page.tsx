@@ -62,7 +62,7 @@ function App() {
            
            <div className='flex flex-row '>
             <div className='flex flex-col'> <Link href="/dashboard"><span className="
-  inline-block  w-[280px] lg:w-[640px]  mt-[30px]  lg:mt-[85px] font-['Serena'] text-[25px]  lg:text-[44px]  not-italic  font-normal leading-[121.6%] bg-gradient-to-t  from-white
+  inline-block  w-[200px] lg:w-[640px]  mt-[30px]  lg:mt-[85px] font-['Serena'] text-[25px]  lg:text-[44px]  not-italic  font-normal leading-[121.6%] bg-gradient-to-t  from-white
   to-[#0DE3F6]
   bg-clip-text     text-transparent  whitespace-normal overflow-visible      break-words           ">
   Modern Living Starts with the Right Elements
@@ -77,7 +77,7 @@ function App() {
               Explore the craftsmanship of luxury doors and windows, designed to bring sophistication and warmth to your living space.
 </p>
 <div className="
-  inline-flex           items-center    w-44    lg:w-72   justify-center        gap-2.5            py-2   lg:py-4           px-4       lg:px-8                mt-2 lg:mt-5                  lg:max-h-max             rounded-xl            bg-[#2ad4f3]          shadow-[0_4px_32px_#564ef7] ">
+  inline-flex           items-center    w-44    lg:w-72   justify-center        gap-2.5            py-2   lg:py-4           px-4       lg:px-8                mt-4 lg:mt-5                  lg:max-h-max             rounded-xl            bg-[#2ad4f3]          shadow-[0_4px_32px_#564ef7] ">
  
  <Link href="/shop"> <span className=" inline-block      text-black        text-center       font-blauer-nue     text-xl  lg:text-2xl          font-normal       leading-normal    ">
   View Products

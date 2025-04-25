@@ -62,9 +62,9 @@ const UserCart = () => {
 
         <button
           onClick={() => router.push("/auth/signin")}
-          className="block lg:hidden  px-1 py-2  bg-gray-100 text-black text-[0.6rem] rounded-md hover:bg-blue-700 transition"
+          className="block lg:hidden  px-1 py-2  bg-gray-100 text-blue-600 text-[0.6rem] font-blauer-nue rounded-md hover:bg-blue-700 transition"
         >
-          Sign In
+          Sign
         </button>
        
        
