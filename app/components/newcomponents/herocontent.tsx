@@ -55,8 +55,7 @@ const HeroContent: React.FC = () => {
         font-blauer-nue             /* Custom font */
         w-full                      /* Ensure it uses available width */
       ">
-        In consequat, quam id sodales hendrerit, eros mi leo, nec lacinia risus
-        neque tristique augue.
+        Explore the brand new doors in ahdal stores with a click.
       </p>
 
       {/* Button - Responsive width */}

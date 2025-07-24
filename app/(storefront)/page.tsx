@@ -77,7 +77,7 @@ function App() {
               Explore the craftsmanship of luxury doors and windows, designed to bring sophistication and warmth to your living space.
 </p>
 <div className="
-  inline-flex           items-center    w-44    lg:w-72   justify-center        gap-2.5            py-2   lg:py-4           px-4       lg:px-8                mt-4 lg:mt-5                  lg:max-h-max             rounded-xl            bg-[#2ad4f3]          shadow-[0_4px_32px_#564ef7] ">
+  inline-flex           items-center    w-44    lg:w-72   justify-center        gap-2.5            py-2   lg:py-4           px-4       lg:px-8                mt-4 lg:mt-5                  lg:max-h-max             rounded-xl            bg-[#2ad4f3]        ">
  
  <Link href="/shop"> <span className=" inline-block      text-black        text-center       font-blauer-nue     text-xl  lg:text-2xl          font-normal       leading-normal    ">
   View Products
@@ -87,7 +87,7 @@ function App() {
 <SocialIconsBar
          iconClassName="absolute  top-12 lg:top-20 right-4  lg:right-28 w-[85px] h-[233px] mt-8 lg:mt-10 lg:ml-28 lg:mt-0 lg:w-[105px] lg:h-[333px]"
       /> </div>
-<div className='block lg:hidden mr-5 mt-3'><StatsCard /></div>\
+<div className='block lg:hidden mr-5 mt-3 '><StatsCard /></div>\
 
 
             </div>

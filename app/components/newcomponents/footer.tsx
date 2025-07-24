@@ -24,24 +24,24 @@ const Footer: React.FC = () => {
                       Contact us
                     </h6>
                     <div className="leading-[26px] mt-3.5">
-                      Phone: +91-1234567890
+                      Phone: +91-7259162197
                       <br />
-                      Fax: +91-1234567890
+                      
                     </div>
                     <div className="leading-[26px] self-stretch mt-6">
                       Need help or have a question?
                       <br />
                       Contact us at:{" "}
                       <a
-                        href="mailhref:admin@deccan.com"
+                        href="mailhref:ahdalsteeldoorsandwindows@gmail.com"
                         className="hover:text-white transition-colors"
                       >
-                        admin@deccan.com
+                        ahdalsteeldoorsandwindows@gmail.com
                       </a>
                     </div>
                     <div className="leading-[26px] mt-[23px]">
-                      Indiranagar, Bangalore, <br />
-                      India, 560038
+                      Farangipete , mangalore <br />
+                      karnataka , India, 574143
                     </div>
                   </div>
                 </div>
